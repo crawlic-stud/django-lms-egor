@@ -6,6 +6,9 @@
 !.vscode/extensions.json 
 .history
 
+__pycache__
+venv
+
 # Environments 
 .env 
 .venv 

@@ -1,18 +1,19 @@
 version: '3'
 services:
-  db:
-    image: mysql:8
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_DATABASE='mydatabase'
-      - MYSQL_USER='root'
-      - MYSQL_PASSWORD='some_password'
-      - MYSQL_ROOT_PASSWORD='some_password'
-      - MYSQL_HOST=''
-    volumes:
-      - /tmp/app/mysqld:/var/run/mysqld
-      - ./db:/var/lib/mysql
+  # db:
+  #   image: mysql:8
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     - MYSQL_DATABASE='django_lms'
+  #     - MYSQL_USER='root'
+  #     - MYSQL_PASSWORD='password'
+  #     - MYSQL_ROOT_PASSWORD='password'
+  #     - MYSQL_HOST='localhost'
+  #   volumes:
+  #     - ./db:/var/lib/mysql
+  #     # - /tmp/app/mysqld:/var/run/mysqld
+  #     # - ./db:/var/lib/mysql
   web:
     build: 
       context: .
