@@ -3,7 +3,7 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    LMS - {{submissions.topic}}
+    Stegsolver - {{submissions.topic}}
 {% endblock title_name %}
     
 
@@ -17,13 +17,13 @@
             <p>Description: {{submissions.description}}</p>
             <p>Submission: {{submissions.assignment_file.name}}</p>
              
-            <a href="{{submissions.assignment_file.url}}" class="btn btn-lg btn-primary" download>Download</a>
+            <a href="{{submissions.assignment_file.url}}" class="btn btn-lg btn-primary" download>Скачать</a>
             <div class="grade">
                 {% if submissions.graded == False %}
-                    <p>This assignment has not been graded yet.</p>
+                    <p>Это задание еще не оценено.</p>
                 {% else %}
-                    <p>This assignment has been graded.</p>
-                    <p>Grade: {{submissions.grade}}</p>
+                    <p>За это задание выставлена ​​оценка.</p>
+                    <p>Оценка: {{submissions.grade}}</p>
                 {% endif %}
             </div>
                 
@@ -34,7 +34,7 @@
                     <form method="POST">
                         {% csrf_token %}
                         <a href="{% url 'assignments:submit_delete' pk=submissions.pk %}" 
-                        class="btn btn-danger btn-lg">Delete</a>
+                        class="btn btn-danger btn-lg">Удалить</a>
                     </form>
                     
                 </div>
@@ -44,7 +44,7 @@
                     {% if submissions.graded == False %}
                         <div>
                             <a href="{% url 'assignments:grade' pk=submissions.pk %}" 
-                            class="btn btn-success btn-lg">Grade</a>
+                            class="btn btn-success btn-lg">Оценка</a>
                         </div>
                     {% endif %}
                 {% endif %}
@@ -53,7 +53,7 @@
                 
         {% else %}
             <div class="jumbotron">
-                <h2>You cannot view this assignment.</h2>
+                <h2>Вы не можете посмотреть это задание.</h2>
             </div>
         {% endif %}
     </div>

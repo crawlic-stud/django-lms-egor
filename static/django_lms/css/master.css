@@ -5,7 +5,7 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #000000; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
@@ -21,7 +21,7 @@ p, a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #999999;
+  color: #F7941D;
   display: block;
 }
 
@@ -98,4 +98,19 @@ i {
 
 .index-button {
   margin-top: 2em;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #F7941D;
+    border-color: #F7941D;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #CE7B16;
+    border-color: #CE7B16;
+}
+.btn-warning {
+    color: #212529;
+    background-color: #F7941D;
+    border-color: #F7941D;
 }

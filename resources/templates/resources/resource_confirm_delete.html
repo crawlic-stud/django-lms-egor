@@ -1,7 +1,7 @@
 {% extends 'resources/resource_base.html' %}
 
 {% block title_name %}
-    LMS - Confirmation
+    Stegsolver Confirm
 {% endblock title_name %}
     
 
@@ -9,18 +9,18 @@
     {% if user.user_type == 2 %}
         <div class="container">
             <div class="jumbotron">
-                <h2>Are you sure you want to delete this resource?</h2>
+                <h2>Вы уверены, что хотите удалить этот ресурс?</h2>
                 <form method="post">
                     {% csrf_token %}
                     <input type="submit" value="Confirm Delete" class="btn btn-danger btn-large">
-                    <a href="{% url 'courses:list' %}" class="btn btn-primary btn-large">Cancel</a>
+                    <a href="{% url 'courses:list' %}" class="btn btn-primary btn-large">Отменить</a>
                 </form>
             </div>
         </div>
     {% else %}
         <div class="container">
             <div class="jumbotron">
-                <h2>You are not allowed to delete a resource.</h2>
+                <h2>У вас недостаточно прав для удаления этого ресурса.</h2>
             </div>
         </div>
     {% endif %}

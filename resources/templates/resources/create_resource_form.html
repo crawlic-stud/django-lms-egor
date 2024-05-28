@@ -2,14 +2,14 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    LMS - Create Resource
+    Stegsolver - Create Resource
 {% endblock title_name %}
     
 
 {% block main_content %}
     
 <div class="container">
-    <h1>Resource</h1>
+    <h1>Ресурс</h1>
 
     
     {% if user.user_type == 2 %}
@@ -21,7 +21,7 @@
         </form>
     {% else %}
         <div class="jumbotron">
-            <h2>You cannot create a resource</h2>
+            <h2>Вы не можете создать ресурс</h2>
         </div>
     {% endif %}
         

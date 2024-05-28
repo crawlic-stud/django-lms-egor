@@ -2,12 +2,12 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    LMS - Create Course
+    Stegsolver - создание курса
 {% endblock title_name %}
     
 
 {% block main_content %}
-    <h1>Create new Course</h1>
+    <h1>Создать новый курс</h1>
     
     {% if user_type == 2 %}
         <form action="{% url 'courses:create' %}" method="POST">
@@ -17,7 +17,7 @@
         </form>
     {% else %}
         <div class="jumbotron">
-            <h2>Oops! You need to be Teacher to access this page.</h2>
+            <h2>Упс! Только учитель имеет доступ к этой страницу.</h2>
         </div>
     {% endif %}
         

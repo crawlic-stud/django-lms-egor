@@ -1,4 +1,3 @@
-version: '3'
 services:
   # db:
   #   image: mysql:8
@@ -24,8 +23,7 @@ services:
     volumes:
       - .:/app
       - /tmp/app/mysqld:/run/mysqld
-    depends_on:
-      - db
+
     links:
         - redis
   redis:

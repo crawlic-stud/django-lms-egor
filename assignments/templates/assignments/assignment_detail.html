@@ -2,7 +2,7 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    LMS - {{assignment.assignment_name}}
+    Stegsolver - {{assignment.assignment_name}}
 {% endblock title_name %}
     
 
@@ -15,11 +15,11 @@
         
         <p>Description: {{assignment.assignment_description}}</p>
         {% if user.user_type == 2 %}
-            <a href="{% url 'assignments:update' pk=assignment.pk %}" class="btn btn-warning btn-lg">Update</a>
-            <a href="{% url 'assignments:delete' pk=assignment.pk %}" class="btn btn-danger btn-lg">Delete</a>
+            <a href="{% url 'assignments:update' pk=assignment.pk %}" class="btn btn-warning btn-lg">Обновить</a>
+            <a href="{% url 'assignments:delete' pk=assignment.pk %}" class="btn btn-danger btn-lg">Удалить</a>
 
             <div class="submissions">
-            <h3>Submissions</h3>
+            <h3>Ответы от студентов</h3>
             
             {% for submissions in submitted %}
                 <a href="{% url 'assignments:submit_detail' pk=submissions.pk %}" class="list-group-item list-group-item-action">
@@ -33,7 +33,7 @@
                     <small>Start Date: {{submissions.submitted_date}}</small><br>
                 </a>
             {% empty %}
-                <h6>No Submissions</h6>
+                <h6>Нет ответов</h6>
             {% endfor %}
             </div>
                 
