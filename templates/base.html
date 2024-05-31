@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Raleway&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'django_lms/css/master.css' %}" />
 </head>
 <body>
@@ -48,7 +48,7 @@
                         
                 {% endfor %}                 
             {% endif %}
-            <a href="{% url 'users:logout' %}" class="sidemenu"><i class="fa fa-sign-out" aria-hidden="true"></i>Выйти</a>
+            <a href="{% url 'users:logout' %}" class="sidemenu"><i class="fa fa-sign-out" aria-hidden="true"></i>Выход</a>
         {% else %}
             <a class="sidemenu side-element">Гость</a>
             <a href="{% url 'home' %}"><i class="fa fa-home" aria-hidden="true"></i>Главная</a>

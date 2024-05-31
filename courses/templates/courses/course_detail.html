@@ -1,7 +1,7 @@
 {% extends 'courses/course_base.html' %} 
 
 {% block title_name %}
-  Stegsolver - {{course.course_name}}
+  Stegsolver
 {% endblock title_name %}
   
 {% block main_content %}
@@ -17,7 +17,7 @@
 >
 {% else %}
 <a href="{% url 'courses:enroll' pk=course.pk %}" class="btn btn-success btn-lg"
-  >Enroll</a
+  >Записаться</a
 >
 {% endif %} 
 {% endif %}
@@ -28,7 +28,7 @@
       href="{% url 'assignments:create' %}"
       class="btn btn-lg btn-fill btn-warning button-stretch"
     >
-      <i class="fa fa-plus-circle" aria-hidden="true"> Создать новую задание</i>
+      <i class="fa fa-plus-circle" aria-hidden="true"> Создать новое задание</i>
     </a>
     <a
       href="{% url 'resources:create' %}"
@@ -49,8 +49,8 @@
         <p class="mb-1">
           {{assignment.assignment_description}}
         </p>
-        <small>Start Date: {{assignment.start_date}}</small><br>
-        <small>Due Date: {{assignment.due_date}} {{assignment.due_time}}</small>
+        <small>Начало: {{assignment.start_date}}</small><br>
+        <small>Конец: {{assignment.due_date}} {{assignment.due_time}}</small>
       </a>
       {% empty %}
       <h6>Нет заданий.</h6>
@@ -58,7 +58,7 @@
     </ul>
   </div>
   <div class="resources">
-    <h3>Ресурсы</h3>
+    <h3>Дополнительные материалы</h3>
     <!-- {% include 'assignments/assignment_list.html' %} -->
     <ul class="list-group">
       {% for resource in resources %}
@@ -76,7 +76,7 @@
         {% endif %}
       </div>
       {% empty %}
-        <h6>Нет задач</h6>
+        <h6>Нет заданий</h6>
       {% endfor %}
     </ul>
   </div>

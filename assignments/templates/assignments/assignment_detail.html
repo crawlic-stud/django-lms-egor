@@ -2,18 +2,18 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    Stegsolver - {{assignment.assignment_name}}
+    Stegsolver
 {% endblock title_name %}
     
 
 {% block main_content %}
     <div class="container">
         <h1>{{assignment.assignment_name}}</h1>
-        <h4>Course: {{assignment.course}}</h4>
-        <h6>Start Date: {{assignment.start_date}}</h6>
-        <h6>Due Date: {{assignment.due_date}}</h6>
+        <h4>Курс: {{assignment.course}}</h4>
+        <h6>Начало: {{assignment.start_date}}</h6>
+        <h6>Конец: {{assignment.due_date}}</h6>
         
-        <p>Description: {{assignment.assignment_description}}</p>
+        <p>Описание: {{assignment.assignment_description}}</p>
         {% if user.user_type == 2 %}
             <a href="{% url 'assignments:update' pk=assignment.pk %}" class="btn btn-warning btn-lg">Обновить</a>
             <a href="{% url 'assignments:delete' pk=assignment.pk %}" class="btn btn-danger btn-lg">Удалить</a>
@@ -30,7 +30,7 @@
                     <p class="mb-1">
                     {{submissions.description}}
                     </p>
-                    <small>Start Date: {{submissions.submitted_date}}</small><br>
+                    <small>Начало: {{submissions.submitted_date}}</small><br>
                 </a>
             {% empty %}
                 <h6>Нет ответов</h6>
@@ -41,10 +41,10 @@
         {% else %}            
             {% if assignment.course in course %}
                 {% if duedate >= time %}
-                    <a href="{% url 'assignments:submit' %}" class="btn btn-success btn-lg">Submit Assignment</a>
+                    <a href="{% url 'assignments:submit' %}" class="btn btn-success btn-lg">Отправить задание</a>
                 {% endif %}
                 <div class="submissions">
-                <h3>My Submissions:</h3>
+                <h3>Мои задания:</h3>
                 
                 {% for submissions in submitted %}
                     {% if submissions.author.id == user.id %}
@@ -56,11 +56,11 @@
                             <p class="mb-1">
                             {{submissions.description}}
                             </p>
-                            <small>Start Date: {{submissions.submitted_date}}</small><br>
+                            <small>Начало: {{submissions.submitted_date}}</small><br>
                         </a>
                     {% endif %}
                 {% empty %}
-                    <h6>No Submissions</h6>
+                    <h6>Нет заданий</h6>
                 {% endfor %}
                 </div>
             {% endif %}

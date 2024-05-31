@@ -3,7 +3,7 @@
 {% load bootstrap4 %}
 
 {% block title_name %}
-    Stegsolver - {{submissions.topic}}
+    Stegsolver
 {% endblock title_name %}
     
 
@@ -12,10 +12,10 @@
     <div class="container">
         {% if submissions.assignment_ques.course.teacher.id == user.id or submissions.author.id == user.id %}
             <h1>{{submissions.topic}}</h1>
-            <h4>Submitted by: {{submissions.author}}</h4>
-            <h6>Submitted On: {{submissions.submitted_date}}</h6>
-            <p>Description: {{submissions.description}}</p>
-            <p>Submission: {{submissions.assignment_file.name}}</p>
+            <h4>Отпралено: {{submissions.author}}</h4>
+            <h6>Когда: {{submissions.submitted_date}}</h6>
+            <p>Описание: {{submissions.description}}</p>
+            <p>Задание: {{submissions.assignment_file.name}}</p>
              
             <a href="{{submissions.assignment_file.url}}" class="btn btn-lg btn-primary" download>Скачать</a>
             <div class="grade">

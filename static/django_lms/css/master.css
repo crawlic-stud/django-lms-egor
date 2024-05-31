@@ -1,22 +1,22 @@
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 20%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  /*height: 100%; откоментировать, чтобы была фикс высота*/
+  width: 20%; /* Ширина боковой панели */
+  position: fixed; /* фикс сайдбар */
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #000000; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #000000;
+  overflow-x: hidden; /* отключение скролла по оси х */
   padding-top: 20px;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Helvetica Neue", 'sans-serif;
 }
 p, a {
-  font-family: 'Raleway', 'sans-serif';
+  font-family: 'Roboto', 'sans-serif';
 }
 
-/* The navigation menu links */
+/* ссылки в меню нав */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -25,18 +25,17 @@ p, a {
   display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
+/* навод мышки - другой цвет */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Style page content */
+/* осн страница */
 .main {
-  margin-left: 160px; /* Same as the width of the sidebar */
+  margin-left: 160px; /* такая же как и ширина сайдбара */
   padding: 0px 10px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -55,7 +54,6 @@ p, a {
 }
 
 .side-element {
-  
   text-align: center;
 }
 
@@ -102,15 +100,15 @@ i {
 .btn-primary {
     color: #fff;
     background-color: #F7941D;
-    border-color: #F7941D;
+    border-color: #CE7B16;
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #CE7B16;
+    background-color: #F7941D;
     border-color: #CE7B16;
 }
 .btn-warning {
     color: #212529;
     background-color: #F7941D;
-    border-color: #F7941D;
+    border-color: #CE7B16;
 }

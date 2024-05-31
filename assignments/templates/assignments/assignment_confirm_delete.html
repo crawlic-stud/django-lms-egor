@@ -1,7 +1,7 @@
 {% extends 'assignments/assignment_base.html' %}
 
 {% block title_name %}
-    Stegsolver - подтверждение
+    Stegsolver
 {% endblock title_name %}
     
 
@@ -13,7 +13,7 @@
                 <form method="post">
                     {% csrf_token %}
                     <input type="submit" value="Confirm Delete" class="btn btn-danger btn-large">
-                    <a href="{% url 'assignments:detail' pk=assignment.pk %}" class="btn btn-primary btn-large">Отмена</a>
+                    <a href="{% url 'assignments:detail' pk=assignment.pk %}" class="btn btn-primary btn-large">Отменить</a>
                 </form>
             </div>
         </div>
