@@ -1,5 +1,5 @@
 .sidenav {
-  height: 100%;
+  height: 100vh; /* Высота сайдбара на всю высоту окна */
   width: 25%; /* Ширина боковой панели */
   position: fixed; /* фикс сайдбар */
   z-index: 1;
@@ -8,10 +8,13 @@
   background-color: #000000;
   overflow-x: hidden; /* отключение скролла по оси х */
   padding-top: 20px;
+  box-sizing: border-box; /* Учитывать паддинги в размерах */
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica Neue", 'sans-serif;
+  font-family: "Helvetica Neue", 'sans-serif';
 }
+
 p, a {
   font-family: 'Roboto', 'sans-serif';
 }
@@ -32,13 +35,28 @@ p, a {
 
 /* осн страница */
 .main {
-  margin-left: 160px; /* такая же как и ширина сайдбара */
+  margin-left: 25%; /* Совпадает с шириной сайдбара */
   padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%; /* Ширина боковой панели на мобильных устройствах */
+    height: auto; /* Высота автоматически */
+    position: relative; /* Относительное позиционирование */
+  }
+  .main {
+    margin-left: 0; /* Обнуляем отступы */
+  }
 }
 
 .content {
@@ -46,6 +64,13 @@ p, a {
   margin-left: 25%;
   margin-bottom: 2em;
   margin-right: 2em;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .sidemenu {
@@ -74,16 +99,16 @@ i {
   color: #f3f3f3;
 }
 
-.course-item a{
+.course-item a {
   font-size: 18px;
 }
 
-.button-stretch{
+.button-stretch {
   margin: 3% 0% 1% 0%;
 }
 
 .card-deck, .assignments, .submissions, .grade {
-  margin:3% 0% 3% 0%
+  margin: 3% 0% 3% 0%;
 }
 
 .resources {
@@ -97,18 +122,21 @@ i {
 .index-button {
   margin-top: 2em;
 }
+
 .btn-primary {
-    color: #fff;
-    background-color: #F7941D;
-    border-color: #CE7B16;
+  color: #fff;
+  background-color: #F7941D;
+  border-color: #CE7B16;
 }
+
 .btn-primary:hover {
-    color: #fff;
-    background-color: #F7941D;
-    border-color: #CE7B16;
+  color: #fff;
+  background-color: #F7941D;
+  border-color: #CE7B16;
 }
+
 .btn-warning {
-    color: #212529;
-    background-color: #F7941D;
-    border-color: #CE7B16;
+  color: #212529;
+  background-color: #F7941D;
+  border-color: #CE7B16;
 }
