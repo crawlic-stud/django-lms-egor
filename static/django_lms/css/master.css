@@ -2,12 +2,12 @@
 .sidenav {
   height: 100vh; /* Высота сайдбара на всю высоту окна */
   width: 25%; /* Ширина боковой панели */
-  position: fixed; /* Фикс сайдбар */
+  position: fixed; /* фикс сайдбар */
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #000000;
-  overflow-x: hidden; /* Отключение скролла по оси х */
+  overflow-x: hidden; /* отключение скролла по оси х */
   padding-top: 20px;
   box-sizing: border-box; /* Учитывать паддинги в размерах */
 }
@@ -40,6 +40,7 @@ p, a {
 .main {
   margin-left: 25%; /* Совпадает с шириной сайдбара */
   padding: 0px 10px;
+  transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
 }
 
 /* Адаптация сайдбара для экранов с высотой менее 450px */
@@ -55,7 +56,7 @@ p, a {
 /* Адаптация для мобильных устройств */
 @media screen and (max-width: 768px) {
   .sidenav {
-    width: 100%; /* Ширина сайдбара на всю ширину экрана */
+    width: 100%; /* Ширина боковой панели на всю ширину экрана */
     height: auto; /* Высота автоматически */
     position: relative; /* Относительное позиционирование */
     padding-top: 0; /* Убираем верхний отступ */
@@ -76,6 +77,7 @@ p, a {
   margin-left: 25%;
   margin-bottom: 2em;
   margin-right: 2em;
+  transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
 }
 
 @media screen and (max-width: 768px) {
