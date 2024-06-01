@@ -1,25 +1,28 @@
+/* Основной стиль для сайдбара */
 .sidenav {
   height: 100vh; /* Высота сайдбара на всю высоту окна */
   width: 25%; /* Ширина боковой панели */
-  position: fixed; /* фикс сайдбар */
+  position: fixed; /* Фикс сайдбар */
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #000000;
-  overflow-x: hidden; /* отключение скролла по оси х */
+  overflow-x: hidden; /* Отключение скролла по оси х */
   padding-top: 20px;
   box-sizing: border-box; /* Учитывать паддинги в размерах */
 }
 
+/* Стиль для заголовков */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", 'sans-serif';
 }
 
+/* Стиль для текста и ссылок */
 p, a {
   font-family: 'Roboto', 'sans-serif';
 }
 
-/* ссылки в меню нав */
+/* Ссылки в меню навигации */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -28,17 +31,18 @@ p, a {
   display: block;
 }
 
-/* навод мышки - другой цвет */
+/* Наведение мыши на ссылки */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* осн страница */
+/* Основной контент страницы */
 .main {
   margin-left: 25%; /* Совпадает с шириной сайдбара */
   padding: 0px 10px;
 }
 
+/* Адаптация сайдбара для экранов с высотой менее 450px */
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -48,17 +52,25 @@ p, a {
   }
 }
 
+/* Адаптация для мобильных устройств */
 @media screen and (max-width: 768px) {
   .sidenav {
-    width: 100%; /* Ширина боковой панели на мобильных устройствах */
+    width: 100%; /* Ширина сайдбара на всю ширину экрана */
     height: auto; /* Высота автоматически */
     position: relative; /* Относительное позиционирование */
+    padding-top: 0; /* Убираем верхний отступ */
   }
   .main {
     margin-left: 0; /* Обнуляем отступы */
+    padding-top: 20px; /* Добавляем отступ сверху */
+  }
+  .sidenav a {
+    text-align: center; /* Центрируем текст ссылок */
+    padding: 10px; /* Увеличиваем паддинг */
   }
 }
 
+/* Дополнительные стили */
 .content {
   margin-top: 2em;
   margin-left: 25%;
