@@ -52,7 +52,6 @@
             {% elif user.user_type == 1 %}
             <div class="card-deck">
                 {% for course in course_list %}
-                    
                     {% if user in course.students.all %}
                         <div class="card" style="width: 18rem">
                             <div class="card-body">
