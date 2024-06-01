@@ -8,8 +8,19 @@
   left: 0;
   background-color: #000000;
   overflow-x: hidden; /* отключение скролла по оси х */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Выравнивание по центру */
   padding-top: 20px;
   box-sizing: border-box; /* Учитывать паддинги в размерах */
+}
+
+/* Содержимое сайдбара */
+.sidenav .sidenav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Стиль для заголовков */
