@@ -10,17 +10,10 @@
   overflow-x: hidden; /* отключение скролла по оси х */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Выравнивание по центру */
-  padding-top: 20px;
+  justify-content: flex-start; /* Выравнивание по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
   box-sizing: border-box; /* Учитывать паддинги в размерах */
-}
-
-/* Содержимое сайдбара */
-.sidenav .sidenav-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  padding-top: 20px;
 }
 
 /* Стиль для заголовков */
