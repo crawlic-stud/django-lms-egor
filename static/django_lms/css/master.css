@@ -1,7 +1,7 @@
 /* Основной стиль для сайдбара */
 .sidenav {
   height: 100vh; /* Высота сайдбара на всю высоту окна */
-  width: 25%; /* Ширина боковой панели */
+  width: 20%; /* Уменьшенная ширина боковой панели */
   position: fixed; /* фикс сайдбар */
   z-index: 1;
   top: 0;
@@ -10,10 +10,18 @@
   overflow-x: hidden; /* отключение скролла по оси х */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Выравнивание по вертикали */
   align-items: center; /* Центрирование по горизонтали */
   box-sizing: border-box; /* Учитывать паддинги в размерах */
   padding-top: 20px;
+}
+
+/* Содержимое сайдбара */
+.sidenav .sidenav-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание по левому краю */
+  padding-left: 20px; /* Отступ слева */
 }
 
 /* Стиль для заголовков */
@@ -28,7 +36,7 @@ p, a {
 
 /* Ссылки в меню навигации */
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px;
   text-decoration: none;
   font-size: 20px;
   color: #F7941D;
@@ -42,7 +50,7 @@ p, a {
 
 /* Основной контент страницы */
 .main {
-  margin-left: 25%; /* Совпадает с шириной сайдбара */
+  margin-left: 20%; /* Совпадает с шириной сайдбара */
   padding: 0px 10px;
   transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
 }
@@ -63,7 +71,6 @@ p, a {
     width: 100%; /* Ширина боковой панели на всю ширину экрана */
     height: auto; /* Высота автоматически */
     position: relative; /* Относительное позиционирование */
-    padding-top: 0; /* Убираем верхний отступ */
   }
   .main {
     margin-left: 0; /* Обнуляем отступы */
@@ -78,7 +85,7 @@ p, a {
 /* Дополнительные стили */
 .content {
   margin-top: 2em;
-  margin-left: 25%;
+  margin-left: 20%;
   margin-bottom: 2em;
   margin-right: 2em;
   transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
@@ -111,7 +118,7 @@ i {
 
 #side-head {
   margin-top: 0.5em;
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px;
   text-decoration: none;
   font-size: 25px;
   color: #f3f3f3;
