@@ -1,37 +1,35 @@
 /* Основной стиль для сайдбара */
 .sidenav {
-  height: 100vh; /* Высота сайдбара на всю высоту окна */
-  width: 20%; /* Уменьшенная ширина боковой панели */
-  position: fixed; /* фикс сайдбар */
+  height: 100vh;
+  width: 20%;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #000000;
-  overflow-x: hidden; /* отключение скролла по оси х */
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрирование по горизонтали */
-  box-sizing: border-box; /* Учитывать паддинги в размерах */
+  align-items: center;
+  box-sizing: border-box;
   padding-top: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Содержимое сайдбара */
-.sidenav .sidenav-content {
+.sidenav.closed {
+  transform: translateX(-100%);
+}
+
+.sidenav.open {
+  transform: translateX(0);
+}
+
+.sidenav .side-items {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Выравнивание по левому краю */
-  padding-left: 20px; /* Отступ слева */
-}
-
-/* Стиль для заголовков */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", 'sans-serif';
-}
-
-/* Стиль для текста и ссылок */
-p, a {
-  font-family: 'Roboto', 'sans-serif';
+  align-items: flex-start;
+  padding-left: 20px;
 }
 
 /* Ссылки в меню навигации */
@@ -48,120 +46,9 @@ p, a {
   color: #f1f1f1;
 }
 
-/* Основной контент страницы */
-.main {
-  margin-left: 20%; /* Совпадает с шириной сайдбара */
-  padding: 0px 10px;
-  transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
-}
-
-/* Адаптация сайдбара для экранов с высотой менее 450px */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-/* Адаптация для мобильных устройств */
-@media screen and (max-width: 768px) {
-  .sidenav {
-    width: 100%; /* Ширина боковой панели на всю ширину экрана */
-    height: auto; /* Высота автоматически */
-    position: relative; /* Относительное позиционирование */
-  }
-  .main {
-    margin-left: 0; /* Обнуляем отступы */
-    padding-top: 20px; /* Добавляем отступ сверху */
-  }
-  .sidenav a {
-    text-align: center; /* Центрируем текст ссылок */
-    padding: 10px; /* Увеличиваем паддинг */
-  }
-}
-
-/* Дополнительные стили */
-.content {
-  margin-top: 2em;
-  margin-left: 20%;
-  margin-bottom: 2em;
-  margin-right: 2em;
-  transition: margin-left 0.3s; /* Плавный переход при изменении отступа */
-}
-
-@media screen and (max-width: 768px) {
-  .content {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.sidemenu {
-  display: block;
-  color: #f4f4f4;
-}
-
-.side-element {
-  text-align: center;
-}
-
-i {
-  margin: 0.2em;
-}
-
-.side-items {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-}
-
-#side-head {
-  margin-top: 0.5em;
-  padding: 6px 8px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f3f3f3;
-}
-
-.course-item a {
-  font-size: 18px;
-}
-
-.button-stretch {
-  margin: 3% 0% 1% 0%;
-}
-
-.card-deck, .assignments, .submissions, .grade {
-  margin: 3% 0% 3% 0%;
-}
-
-.resources {
-  margin-bottom: 1%;
-}
-
-.index-image {
-  height: 100%;
-}
-
-.index-button {
-  margin-top: 2em;
-}
-
-.btn-primary {
+/* Кнопка для открытия/закрытия сайдбара */
+.menu-toggle {
+  display: none;
+  background-color: #000;
   color: #fff;
-  background-color: #F7941D;
-  border-color: #CE7B16;
-}
-
-.btn-primary:hover {
-  color: #fff;
-  background-color: #F7941D;
-  border-color: #CE7B16;
-}
-
-.btn-warning {
-  color: #212529;
-  background-color: #F7941D;
-  border-color: #CE7B16;
-}
+  font-size: 20
